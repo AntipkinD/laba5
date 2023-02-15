@@ -1,33 +1,39 @@
 ﻿public class Abiturient
+{
+    public string asurname, bname, csecondname, eadres;
+    public int oz1, oz2, oz3, oz4, oz5;
+public Abiturient() 
+        {
+        this.asurname = "unknown";
+        this.bname = "unknown";
+        this.csecondname = "unkniwn";
+        this.eadres = "unknown";
+        this.oz1 = 0;
+        this.oz2 = 0;
+        this.oz3 = 0;
+        this.oz4 = 0;
+        this.oz5 = 0;
+        }
+public Abiturient(string surname, string name, string secondname, string adres, int oz1, int oz2, int oz3, int oz4, int oz5)
     {
-        public string surname, name, scndname, adress, allinfo;
-        public int est;
-        public object[] dannye = new object[25];
-    public int[] ozenki = new int[25];
-        public Abiturient(string surname, string name, string scndname, string adress)
-        {
-            this.allinfo = $"{this.surname}, " + $"{this.name}, " + $"{this.scndname}, " + $"{this.adress}";
-        for (int i = 0; i < 1; i++)
-            {
-            for (int k = 0; k < 5; k++)
-            {
-                this.est = int.Parse(Console.ReadLine());
-                ozenki[i] = this.est;
-            }
-            dannye[i] = this.allinfo;
-            }
-        }
-        public Abiturient()
-        {
-            this.surname = "unknown";
-            this.name = "unknown";
-            this.scndname = "unknown";
-            this.adress = "unknown";
-            this.est = 0;
-            this.allinfo = $"{this.surname}, " + $"{this.name}, " + $"{this.scndname}, " + $"{this.adress}, " + $"{this.est}";
-        }
-        /*public VvodDannyx()
-        {
-
-        }*/
+        this.asurname = surname;
+        this.bname = name;
+        this.csecondname = secondname;
+        this.eadres = adres;
+        this.oz1 = oz1;
+        this.oz2 = oz2;
+        this.oz3 = oz3;
+        this.oz4 = oz4;
+        this.oz5 = oz5;
     }
+/*public void ProverkaA(Abiturient[] value)
+    {
+        if (oz1 != 0 || oz2 != 0)
+        {
+            for (int i = 0; i < value.Length; i++)
+            {
+                Console.WriteLine($"{value[i].asurname} {value[i].bname} {value[i].csecondname}");
+            }
+        }
+    }*/
+}
