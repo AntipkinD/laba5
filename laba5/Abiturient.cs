@@ -26,14 +26,26 @@ public Abiturient(string surname, string name, string secondname, string adres, 
         this.oz4 = oz4;
         this.oz5 = oz5;
     }
-/*public void ProverkaA(Abiturient[] value)
+public static void ProverkaA(Abiturient[] value)
     {
-        if (oz1 != 0 || oz2 != 0)
-        {
-            for (int i = 0; i < value.Length; i++)
+        Console.WriteLine("Неудовлетворительные оценки имеют следующие студенты");
+        for (int j = 0; j < value.Length; j++)
+            if (value[j].oz1 != 0 || value[j].oz2 != 0)
             {
-                Console.WriteLine($"{value[i].asurname} {value[i].bname} {value[i].csecondname}");
+                Console.WriteLine($"{value[j].asurname} {value[j].bname} {value[j].csecondname}" + " " + $"1: {value[j].oz1}; 2: {value[j].oz2}");
             }
-        }
-    }*/
+        Console.WriteLine("______________________________________________________________________________________________________________________");
+    }
+public static void ProverkaB(Abiturient[] value)
+    {
+        Console.WriteLine("Укажите сумму баллов ");
+        int maxozenki = int.Parse(Console.ReadLine());
+        Console.WriteLine($"Студенты, сумма баллов которых не ниже {maxozenki}:");
+        for (int j = 0; j < value.Length; j++)
+            if (value[j].oz1 * 1 + value[j].oz2 * 2 + value[j].oz3 * 3 + value[j].oz4 * 4 + value[j].oz5 * 5 >= maxozenki)
+            {
+                Console.WriteLine($"{value[j].asurname} {value[j].bname} {value[j].csecondname}, сумма оценок: {value[j].oz1 * 1 + value[j].oz2 * 2 + value[j].oz3 * 3 + value[j].oz4 * 4 + value[j].oz5 * 5}");
+            }
+        Console.WriteLine("______________________________________________________________________________________________________________________");
+    }
 }
