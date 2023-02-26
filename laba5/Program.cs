@@ -20,11 +20,11 @@ new Abiturient("Верщенко", "Анатолий", "Григорьевич",
             arra[c] = new Abiturient(Console.ReadLine(), Console.ReadLine(), Console.ReadLine(), Console.ReadLine(), int.Parse(Console.ReadLine()), int.Parse(Console.ReadLine()), int.Parse(Console.ReadLine()), int.Parse(Console.ReadLine()), int.Parse(Console.ReadLine()));
         }
         */
-        for (int i = 0; i < 120000; i++)
+        for (int i = 0; i < 120000; i++)//вызов создателя экземпляров
             Abiturient.objectGenerator($"Musor {i}", null, null, null, 0, 0, 0, 0, 0);
-        Abiturient.ProverkaC(arra);
         Abiturient.ProverkaA(arra);
         Abiturient.ProverkaB(arra);
+        Abiturient.ProverkaC(arra);
         
 
         

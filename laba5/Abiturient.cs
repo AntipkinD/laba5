@@ -62,9 +62,9 @@ public static void ProverkaB(Abiturient[] value)
     }
 public static void ProverkaC(Abiturient[] value)
     {
+        Console.WriteLine("Абитуриенты, упорядоченные по убыванию суммы оценок:");
         var provc = value.OrderByDescending(ob => ob.summozenok).ToArray();
         Array.ForEach(provc, Console.WriteLine);
-
     }
     public override string ToString()
     {
