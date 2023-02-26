@@ -1,10 +1,10 @@
 ﻿using System.Security.Cryptography.X509Certificates;
 using System.Linq;
-public class Abiturient
+internal class Abiturient
 {
-    public string asurname, bname, csecondname, eadres;
-    public int oz1, oz2, oz3, oz4, oz5, summozenok;
-public Abiturient() //конструктор по умолчанию
+    string asurname, bname, csecondname, eadres;
+    int oz1, oz2, oz3, oz4, oz5, summozenok;
+internal Abiturient() //конструктор по умолчанию
         {
         this.asurname = "unknown";
         this.bname = "unknown";
@@ -17,7 +17,7 @@ public Abiturient() //конструктор по умолчанию
         this.oz5 = 0;
         this.summozenok = this.oz1 * 1 + this.oz2 * 2 + this.oz3 * 3 + this.oz4 * 4 + this.oz5*5;
         }
-public Abiturient(string surname, string name, string secondname, string adres, int oz1, int oz2, int oz3, int oz4, int oz5) //конструктор с параметрами
+internal Abiturient(string surname, string name, string secondname, string adres, int oz1, int oz2, int oz3, int oz4, int oz5) //конструктор с параметрами
     {
         this.asurname = surname;
         this.bname = name;
@@ -34,11 +34,11 @@ public Abiturient(string surname, string name, string secondname, string adres, 
     {   
         Console.WriteLine($"Объект {this.asurname} уничтожен");
     }
-public static void objectGenerator(string surname, string name, string secondname, string adres, int oz1, int oz2, int oz3, int oz4, int oz5) //создатель объектов
+internal static void objectGenerator(string surname, string name, string secondname, string adres, int oz1, int oz2, int oz3, int oz4, int oz5) //создатель объектов
     {
         Abiturient abi = new Abiturient(surname, name, secondname, adres, oz1, oz2, oz3, oz4, oz5);
     }
-    public static void ProverkaA(Abiturient[] value)
+internal static void ProverkaA(Abiturient[] value)
     {
         Console.WriteLine("Неудовлетворительные оценки имеют следующие студенты");
         for (int j = 0; j < value.Length; j++)
@@ -48,7 +48,7 @@ public static void objectGenerator(string surname, string name, string secondnam
             }
         Console.WriteLine("______________________________________________________________________________________________________________________");
     }
-public static void ProverkaB(Abiturient[] value)
+internal static void ProverkaB(Abiturient[] value)
     {
         Console.WriteLine("Укажите сумму баллов ");
         int maxozenki = int.Parse(Console.ReadLine());
@@ -60,13 +60,13 @@ public static void ProverkaB(Abiturient[] value)
             }
         Console.WriteLine("______________________________________________________________________________________________________________________");
     }
-public static void ProverkaC(Abiturient[] value)
+internal static void ProverkaC(Abiturient[] value)
     {
         Console.WriteLine("Абитуриенты, упорядоченные по убыванию суммы оценок:");
         var provc = value.OrderByDescending(ob => ob.summozenok).ToArray();
         Array.ForEach(provc, Console.WriteLine);
     }
-    public override string ToString()
+public override string ToString()
     {
         return $"{asurname} {bname} {csecondname} с суммой оценок {summozenok}";
     }
