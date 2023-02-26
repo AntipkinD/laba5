@@ -2,7 +2,7 @@
 {
     private static void Main(string[] args)
     {
-        int n = int.Parse(Console.ReadLine());
+        //int n = int.Parse(Console.ReadLine());
         Abiturient[] arra =
         {
 new Abiturient("Костенко", "Виктор", "Владиславович", "ул. Бекешская 16", 4, 5, 4, 2, 1),
@@ -14,14 +14,14 @@ new Abiturient("Баринов", "Виктор", "Петрович", "ул. Фр
 new Abiturient("Барискин", "Олег", "Викторович", "ул. Ветеранов 12", 0, 0, 0, 3, 15),
 new Abiturient("Верщенко", "Анатолий", "Григорьевич", "ул. Бекешская 23", 0, 0, 4, 2, 6),
 };
-
+        Console.WriteLine(arra[6].SUMMOZENOK);
         /*for (int c = 8; c<arra.Length; c++)
         {
             arra[c] = new Abiturient(Console.ReadLine(), Console.ReadLine(), Console.ReadLine(), Console.ReadLine(), int.Parse(Console.ReadLine()), int.Parse(Console.ReadLine()), int.Parse(Console.ReadLine()), int.Parse(Console.ReadLine()), int.Parse(Console.ReadLine()));
         }
         */
-        for (int i = 0; i < 120000; i++)//вызов создателя экземпляров
-            Abiturient.objectGenerator($"Musor {i}", null, null, null, 0, 0, 0, 0, 0);
+        /*for (int i = 0; i < 120000; i++)//вызов создателя экземпляров
+            Abiturient.objectGenerator($"Musor {i}", null, null, null, 0, 0, 0, 0, 0);*/
         Abiturient.ProverkaA(arra);
         Abiturient.ProverkaB(arra);
         Abiturient.ProverkaC(arra);
