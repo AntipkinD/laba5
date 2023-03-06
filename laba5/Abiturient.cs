@@ -18,11 +18,11 @@ internal class Abiturient
         this.oz5 = 0;
         this.summozenok = this.oz1 * 1 + this.oz2 * 2 + this.oz3 * 3 + this.oz4 * 4 + this.oz5 * 5;
     }
-    internal Abiturient(string surname, string name, string secondname, string adres, int oz1, int oz2, int oz3, int oz4, int oz5)
+    internal Abiturient(string surname, string name, string secondname, string adres, int oz1, int oz2, int oz3, int oz4, int oz5) //конструктор с параметрами
     {
         ASURNAME = surname;
         BNAME = name;
-        csecondname = surname;
+        CSECONDNAME = surname;
         EADRES = adres;
         OZ1 = oz1;
         OZ2 = oz2;
