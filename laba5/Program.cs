@@ -26,6 +26,7 @@ new Abiturient("Верщенко", "Анатолий", "Григорьевич",
         Abiturient.ProverkaB(arra);
         Abiturient.ProverkaC(arra);
 
+
     }
 }
 /*for (int i = 0; i < 5; i++)
